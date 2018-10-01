@@ -1,6 +1,8 @@
 export default {
   "links": {
     "home": "Home",
+    "products": "Products",
+    "solution": "Solution",
     "about": "About",
     "users": "Users",
     "english": "English",
@@ -18,5 +20,11 @@ export default {
   },
   "users": {
     "title": "All Users"
+  },
+  "products": {
+    "title": "All Products"
+  },
+  "solution": {
+    "title": "All Solution"
   }
 }

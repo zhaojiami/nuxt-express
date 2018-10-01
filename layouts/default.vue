@@ -7,10 +7,16 @@
           <nuxt-link class="Header__Link" :to="localePath('index')" exact>
             {{ $t('links.home') }}
           </nuxt-link>
+          <nuxt-link class="Header__Link" :to="localePath('products')" exact>
+            {{ $t('links.products') }}
+          </nuxt-link>
+          <nuxt-link class="Header__Link" :to="localePath('solution')" exact>
+            {{ $t('links.solution') }}
+          </nuxt-link>
           <nuxt-link class="Header__Link" :to="localePath('about')" exact>
             {{ $t('links.about') }}
           </nuxt-link>
-          <nuxt-link class="Header__Link" v-if="$i18n.locale === 'zh'" :to="switchLocalePath('en')" active-class="none" exact>
+          <!-- <nuxt-link class="Header__Link" v-if="$i18n.locale === 'zh'" :to="switchLocalePath('en')" active-class="none" exact>
             {{ $t('links.english') }}
           </nuxt-link>
           <nuxt-link class="Header__Link" v-else :to="switchLocalePath('zh')" active-class="none" exact>
@@ -24,18 +30,21 @@
             <span class="Header__Link" @click="handleLogout">
               {{ $t('links.lgout') }}
             </span>
-          </span>
+          </span> -->
         </nav>
       </div>
     </header>
     <nuxt/>
+    <div class="wrap-simple-des">
+      Simple Descriptions
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   mounted() {
-    console.log('[layouts default] mounted');
+    console.log("[layouts default] mounted");
   },
   methods: {
     handleLogout() {
@@ -47,8 +56,8 @@ export default {
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -113,5 +122,11 @@ html {
 .Content__Title {
   font-weight: 300;
   padding-bottom: 30px;
+}
+</style>
+<style lang="scss" scoped>
+.wrap-simple-des {
+  background: black;
+  color: white;
 }
 </style>

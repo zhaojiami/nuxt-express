@@ -1,6 +1,8 @@
 export default {
   "links": {
     "home": "主页",
+    "products": "产品列表",
+    "solution": "解决方案",
     "about": "关于",
     "users": "用户列表",
     "english": "English",
@@ -18,5 +20,11 @@ export default {
   },
   "users": {
     "title": "用户一览"
+  },
+  "products": {
+    "title": "产品一览"
+  },
+  "solution": {
+    "title": "解决方案"
   }
 }

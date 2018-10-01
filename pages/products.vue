@@ -1,5 +1,5 @@
 <template>
-  <nuxt-child class="wrap-users" />
+  <nuxt-child class="wrap-products" />
 </template>
 <script>
 export default {
