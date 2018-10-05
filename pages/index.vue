@@ -1,13 +1,32 @@
 <template>
   <section class="wrap-index">
-    <logo/>
-    <h1 class="title">
-      {{ $t('home.title') }}
-    </h1>
-    <h2 class="subtitle">
-      {{ $t('home.introduction') }}
-      <nuxt-link :to="localePath('users')">{{ $t('links.users') }}</nuxt-link>
-    </h2>
+    <!-- <section class="wrap-sec">
+      <el-carousel trigger="click" height="150px">
+      <el-carousel-item v-for="item in 4" :key="item">
+        <h3>{{ item }}</h3>
+      </el-carousel-item>
+    </el-carousel>
+    </section> -->
+    <section class="wrap-sec">
+      <header class="title-sec">Products</header>
+      <el-row class="list-product-serial">
+        <el-col :span="8" v-for="serial in productSerial" :key="serial.id">
+          <nuxt-link :to="localePath({name: 'products-serial', params: {serial: serial.id}})">
+              <span :class="['item-product-serial', serial.cls]">
+                  <span class="title-serial">{{ serial.name }}</span>
+              </span>
+          </nuxt-link>
+        </el-col>
+      </el-row>
+    </section>
+    <section class="wrap-sec">
+      <header class="title-sec">Solution</header>
+      <el-row class="list-product-serial">
+        <el-col :span="8" v-for="item in [1,2,3]" :key="item">
+          {{ item }}
+        </el-col>
+      </el-row>
+    </section>
   </section>
 </template>
 
@@ -15,33 +34,94 @@
 import Logo from "~/components/Logo.vue";
 
 export default {
-  auth: false,
+  // auth: false,
   components: {
     Logo
+  },
+  data() {
+    return {
+      productSerial: [
+        {
+          id: "industrial",
+          name: "Industrial Lighting",
+          cls: "indus"
+        },
+        {
+          id: "commercial",
+          name: "Commercial Lighting",
+          cls: "com"
+        },
+        {
+          id: "smart",
+          name: "Smart Lighting",
+          cls: "smart"
+        }
+      ]
+    };
   }
 };
 </script>
-
 <style>
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n + 1) {
+  background-color: #d3dce6;
+}
+</style>
+
+<style lang="scss" scoped>
 .wrap-index {
   text-align: center;
 }
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.wrap-sec {
+  margin-bottom: 50px;
+  .title-sec {
+    color: #333333;
+    font-size: 28px;
+    text-align: center;
+  }
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.list-product-serial {
+  text-align: center;
+  .item-product-serial {
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    padding: 210px 10px 0 10px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 200px;
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      /* transform: scale(1.1); */
+      color: #5bba4a;
+    }
+    &.indus {
+      background-image: url("../static/products/indus/ufo-led-highbay/100W-1.jpg");
+    }
+    &.com {
+      background-image: url("../static/products/com/led-par-lamp/7-10W.jpg");
+    }
+    &.smart {
+      background-image: url("../static/products/smart/smart-led-bulb/7W.jpg");
+    }
+    .title-serial {
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
 }
 </style>

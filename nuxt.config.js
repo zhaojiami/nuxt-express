@@ -6,7 +6,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'SidenLux',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -56,9 +56,9 @@ module.exports = {
         { code: 'zh', iso: 'zh-CN', file: 'zh.js' },
         { code: 'en', iso: 'en-US', file: 'en.js' }
       ],
-      defaultLocale: 'zh',
+      defaultLocale: 'en',
       vueI18n: {
-        fallbackLocale: 'zh'
+        fallbackLocale: 'en'
       }
     }],
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/toast
@@ -66,7 +66,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://auth.nuxtjs.org/
-    '@nuxtjs/auth',
+    // '@nuxtjs/auth',
     // Doc: https://github.com/nuxt-community/redirect-module
     '@nuxtjs/redirect-module'
   ],
@@ -92,7 +92,6 @@ module.exports = {
   },
   /*
   ** Auth module configuration
-  */
   auth: {
     redirect: {
       login: '/login', //login: User will be redirected to this path if login is required.
@@ -138,6 +137,7 @@ module.exports = {
       }
     }
   },
+  */
   /*
   ** Redirect module configuration
   */
@@ -159,7 +159,7 @@ module.exports = {
       //   }
       // )
     },
-    middleware: ['auth']
+    // middleware: ['auth']
   },
   /*
   ** Build configuration
@@ -184,23 +184,37 @@ module.exports = {
   serverMiddleware: [
     // API middleware
     // { path: '/api', handler: '~/api/index.js' }
-    '~/api/index.js'
+    // '~/api/index.js'
   ],
   generate: {
     routes: [
       '/',
+      '/products',
+      '/products/industrial',
+      '/products/industrial/ufo-led-highbay',
+      '/products/industrial/square-led-highbay',
+      '/products/industrial/linear-led-highbay',
+      '/products/commercial',
+      '/products/commercial/led-bulb',
+      '/products/commercial/led-par-lamp',
+      '/products/smart',
+      '/products/smart/led-bulb',
+      '/solution',
+      '/solution/solution-111',
+      '/solution/solution-222',
+      '/solution/solution-333',
       '/about',
-      '/users',
-      '/users/111',
-      '/users/222',
-      '/users/333',
+      // '/users',
+      // '/users/111',
+      // '/users/222',
+      // '/users/333',
 
-      '/en',
-      '/en/about',
-      '/en/users',
-      '/en/users/111',
-      '/en/users/222',
-      '/en/users/333'
+      // '/en',
+      // '/en/about',
+      // '/en/users',
+      // '/en/users/111',
+      // '/en/users/222',
+      // '/en/users/333'
     ]
   }
 }

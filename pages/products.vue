@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-  auth: false,
+  // auth: false,
   // transition: "test",
   // layout: "leftRight"
 };

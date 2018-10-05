@@ -1,16 +1,16 @@
 <template>
   <section>
-    ID:{{ $route.params.id }}
-    <div>
-      <nuxt-link :to="localePath('users')">{{ $t('links.users') }}</nuxt-link>
-    </div>
+    Solution ID:{{ $route.params.id }}
   </section>
 </template>
 <script>
 export default {
-  auth: false,
-  validate({ params }) {
-    return /^\d+/.test(params.id);
+  // auth: false,
+  // validate({ params }) {
+  //   return /^\d+/.test(params.id);
+  // },
+  head() {
+    return { title: this.$t("solution.title") };
   },
   data() {
     return {};

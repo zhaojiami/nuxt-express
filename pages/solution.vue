@@ -1,9 +1,9 @@
 <template>
-  <nuxt-child class="wrap-products" />
+  <nuxt-child class="wrap-solution" />
 </template>
 <script>
 export default {
-  auth: false,
+  // auth: false,
   // transition: "test",
   // layout: "leftRight"
 };
