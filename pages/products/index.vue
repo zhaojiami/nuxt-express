@@ -59,7 +59,7 @@ export default {
       cursor: pointer;
       &:hover {
         /* transform: scale(1.1); */
-        color: #5bba4a;
+        color: #8F1577;
       }
       &.indus {
         background-image: url("../../static/products/indus/ufo-led-highbay/100W-1.jpg");

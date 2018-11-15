@@ -82,7 +82,7 @@ export default {
     }
     .title-sec {
         margin: 20px auto 10px auto;
-        color: #5bba4a;
+        color: #8F1577;
     }
     .tb-sec {
         width: 90%;

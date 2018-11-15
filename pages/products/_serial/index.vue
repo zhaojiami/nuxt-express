@@ -54,12 +54,12 @@ export default {
           serial: "industrial",
           cls: "indus-linear-led-highbay"
         },
-        // {
-        //   id: "led-floodlight",
-        //   name: "led floodlight",
-        //   serial: "industrial",
-        //   cls: "indus"
-        // },
+        {
+          id: "nova-flood-light",
+          name: "nova flood light",
+          serial: "industrial",
+          cls: "indus-nova-flood-light"
+        },
         {
           id: "led-bulb",
           name: "LED bulb",
@@ -78,6 +78,13 @@ export default {
           serial: "commercial",
           serialName: "Commercial Lighting",
           cls: "com-led-par-lamp"
+        },
+        {
+          id: "saber-linear-light",
+          name: "saber linear light",
+          serial: "commercial",
+          serialName: "Commercial Lighting",
+          cls: "com-saber-linear-light"
         },
         {
           id: "led-bulb",
@@ -134,7 +141,7 @@ export default {
       cursor: pointer;
       &:hover {
         /* transform: scale(1.1); */
-        color: #5bba4a;
+        color: #8F1577;
       }
       &.indus-ufo-led-highbay {
         background-image: url("../../../static/products/indus/ufo-led-highbay/100W-1.jpg");
@@ -145,11 +152,17 @@ export default {
       &.indus-linear-led-highbay {
         background-image: url("../../../static/products/indus/linear-led-highbay/100W-1.png");
       }
+      &.indus-nova-flood-light {
+        background-image: url("../../../static/products/indus/nova-flood-light/1.jpg");
+      }
       &.com-led-bulb {
         background-image: url("../../../static/products/com/led-bulb/7W.jpg");
       }
       &.com-led-par-lamp {
         background-image: url("../../../static/products/com/led-par-lamp/7-10W.jpg");
+      }
+      &.com-saber-linear-light {
+        background-image: url("../../../static/products/com/saber-linear-light/1.jpg");
       }
       &.smart-led-bulb {
         background-image: url("../../../static/products/smart/smart-led-bulb/7W.jpg");

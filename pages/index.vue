@@ -12,18 +12,22 @@
       <el-row class="list-product-serial">
         <el-col :span="8" v-for="serial in productSerial" :key="serial.id">
           <nuxt-link :to="localePath({name: 'products-serial', params: {serial: serial.id}})">
-              <span :class="['item-product-serial', serial.cls]">
-                  <span class="title-serial">{{ serial.name }}</span>
-              </span>
+            <span :class="['item-product-serial', serial.cls]">
+              <span class="title-serial">{{ serial.name }}</span>
+            </span>
           </nuxt-link>
         </el-col>
       </el-row>
     </section>
     <section class="wrap-sec">
       <header class="title-sec">Solution</header>
-      <el-row class="list-product-serial">
-        <el-col :span="8" v-for="item in [1,2,3]" :key="item">
-          {{ item }}
+      <el-row class="list-solutions">
+        <el-col :span="8" v-for="solution in solutions" :key="solution.id">
+          <nuxt-link :to="localePath({name: 'solution-id', params: {id: solution.id}})">
+            <span :class="['item-solution', solution.cls]">
+              <span class="title-solution">{{ solution.name }}</span>
+            </span>
+          </nuxt-link>
         </el-col>
       </el-row>
     </section>
@@ -56,6 +60,28 @@ export default {
           name: "Smart Lighting",
           cls: "smart"
         }
+      ],
+      solutions: [
+        {
+          id: "gymnasium",
+          name: "Gymnasium",
+          cls: "gymnasium"
+        },
+        {
+          id: "manufacturing",
+          name: "Manufacturing",
+          cls: "manufacturing"
+        },
+        {
+          id: "smart-home",
+          name: "Smart Home",
+          cls: "smart-home"
+        },
+        {
+          id: "warehouse",
+          name: "Warehouse",
+          cls: "warehouse"
+        }
       ]
     };
   }
@@ -86,9 +112,11 @@ export default {
 .wrap-sec {
   margin-bottom: 50px;
   .title-sec {
-    color: #333333;
+    color: #8F1577;
     font-size: 28px;
+    font-weight: bold;
     text-align: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -107,7 +135,7 @@ export default {
     cursor: pointer;
     &:hover {
       /* transform: scale(1.1); */
-      color: #5bba4a;
+      color: #8f1577;
     }
     &.indus {
       background-image: url("../static/products/indus/ufo-led-highbay/100W-1.jpg");
@@ -119,6 +147,41 @@ export default {
       background-image: url("../static/products/smart/smart-led-bulb/7W.jpg");
     }
     .title-serial {
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+}
+.list-solutions {
+  text-align: center;
+  .item-solution {
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    padding: 210px 10px 0 10px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 200px;
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      /* transform: scale(1.1); */
+      color: #8f1577;
+    }
+    &.gymnasium {
+      background-image: url("../static/solutions/gymnasium/gymnasium.jpg");
+    }
+    &.manufacturing {
+      background-image: url("../static/solutions/manufacturing/manufacturing.jpg");
+    }
+    &.smart-home {
+      background-image: url("../static/solutions/smart-home/smart-home.jpg");
+    }
+    &.warehouse {
+      background-image: url("../static/solutions/warehouse/warehouse.jpg");
+    }
+    .title-solution {
       text-decoration: none;
       font-size: 20px;
     }

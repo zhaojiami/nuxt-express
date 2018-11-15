@@ -2,18 +2,19 @@
   <div class="wrap-layout-default">
     <header class="Header">
       <div class="content-header">
-        <h1 class="Header__Title">SidenLux</h1>
+        <!-- <h1 class="Header__Title">Siden</h1> -->
+        <img src="../assets/logo.png" alt="siden" class="Header__Title">
         <nav class="Header__Menu">
           <nuxt-link class="Header__Link" :to="localePath('index')" exact>
             {{ $t('links.home') }}
           </nuxt-link>
-          <nuxt-link class="Header__Link" :to="localePath('products')" exact>
+          <nuxt-link class="Header__Link" :to="localePath('products')">
             {{ $t('links.products') }}
           </nuxt-link>
-          <nuxt-link class="Header__Link" :to="localePath('solution')" exact>
+          <nuxt-link class="Header__Link" :to="localePath('solution')">
             {{ $t('links.solution') }}
           </nuxt-link>
-          <nuxt-link class="Header__Link" :to="localePath('about')" exact>
+          <nuxt-link class="Header__Link" :to="localePath('about')">
             {{ $t('links.about') }}
           </nuxt-link>
         </nav>
@@ -27,7 +28,7 @@
             <el-col :span="12">
               <!-- <div class="title-des">CONTACT INFO</div> -->
               <p class="txt-des">
-                Tel: +86-13265637766<br>
+                Tel: +86-0755-33174466<br>
                 Email: info@sidenlux.com
               </p>
             </el-col>
@@ -41,7 +42,7 @@
         </div>
         <div class="wrap-copyright">
           <div class="container-copyright">
-            &copy;2018 SIDENLUX | All Rights Reserved | Designed by 
+            &copy;2018 SIDEN | All Rights Reserved | Designed by 
             <a href="https://sidenlux.com" class="arch-cp">sidenlux.com</a>
           </div>
         </div>
@@ -62,27 +63,6 @@ export default {
   }
 };
 </script>
-
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-</style>
 <style lang="scss" scoped>
 .wrap-layout-default {
     position: static;
@@ -100,9 +80,9 @@ html {
       padding: 0 50px;
       .Header__Title {
         float: left;
-        color: #333333;
-        font-size: 30px;
         user-select: none;
+        height: 40px;
+        margin-top: 15px;
       }
       .Header__Menu {
         float: right;
@@ -117,7 +97,7 @@ html {
           text-decoration: none;
           user-select: none;
           &:hover {
-            color: #5bba4a;
+            color: #8F1577;
           }
         }
       }
@@ -131,16 +111,13 @@ html {
     .wrap-content {
       position: relative;
       display: block;
-      min-height: calc(100% - 70px);
       .container-content {
         padding: 20px 50px;
-        min-height: 450px;
-        /* background-color: tomato; */
+        background-color: white;
+        min-height: calc(100vh - 70px);
       }
       .wrap-simple-des {
         padding: 0 50px;
-        /* background: #f8f8f8;
-        color: #333333; */
         background-color: black;
         color: white;
         .container-des {
@@ -163,7 +140,7 @@ html {
               color: white;
               &:hover {
                 cursor: pointer;
-                color: #5bba4a;
+                color: #8F1577;
               }
             }
           }

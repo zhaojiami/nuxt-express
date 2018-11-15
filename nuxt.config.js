@@ -6,14 +6,15 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'SidenLux',
+    title: 'Siden',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
     ]
   },
 
@@ -194,15 +195,18 @@ module.exports = {
       '/products/industrial/ufo-led-highbay',
       '/products/industrial/square-led-highbay',
       '/products/industrial/linear-led-highbay',
+      '/products/industrial/nova-flood-light',
       '/products/commercial',
       '/products/commercial/led-bulb',
       '/products/commercial/led-par-lamp',
+      '/products/commercial/saber-linear-light',
       '/products/smart',
       '/products/smart/led-bulb',
       '/solution',
-      '/solution/solution-111',
-      '/solution/solution-222',
-      '/solution/solution-333',
+      '/solution/gymnasium',
+      '/solution/manufacturing',
+      '/solution/smart-home',
+      '/solution/warehouse',
       '/about',
       // '/users',
       // '/users/111',

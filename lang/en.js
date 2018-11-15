@@ -22,9 +22,9 @@ export default {
     "title": "All Users"
   },
   "products": {
-    "title": "All Products"
+    "title": "Products"
   },
   "solution": {
-    "title": "All Solution"
+    "title": "Solution"
   }
 }
