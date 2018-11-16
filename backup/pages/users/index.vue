@@ -19,14 +19,6 @@
 export default {
   //   transition: "test"
   mounted() {
-    this.$axios.$get("/api/users").then(
-      resp => {
-        console.log("[users index] get users:", resp);
-      },
-      err => {
-        this.$message.error(err.message || "网络繁忙");
-      }
-    );
   }
 };
 </script>

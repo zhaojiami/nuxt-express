@@ -35,13 +35,13 @@
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
+// import Logo from "~/components/Logo.vue";
 
 export default {
   // auth: false,
-  components: {
-    Logo
-  },
+  // components: {
+  //   Logo
+  // },
   data() {
     return {
       productSerial: [

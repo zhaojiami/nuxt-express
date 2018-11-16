@@ -11,7 +11,7 @@ export default {
     return { title: this.$t("products.title") };
   },
   mounted() {
-    console.log('_serial mounted');
+    // console.log('_serial mounted');
   }
 };
 </script>

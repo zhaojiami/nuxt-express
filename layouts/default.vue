@@ -2,8 +2,9 @@
   <div class="wrap-layout-default">
     <header class="Header">
       <div class="content-header">
-        <!-- <h1 class="Header__Title">Siden</h1> -->
-        <img src="../assets/logo.png" alt="siden" class="Header__Title">
+        <nuxt-link :to="localePath('index')" exact>
+          <img src="../assets/logo.png" alt="siden" class="Header__Title">
+        </nuxt-link>
         <nav class="Header__Menu">
           <nuxt-link class="Header__Link" :to="localePath('index')" exact>
             {{ $t('links.home') }}
@@ -21,7 +22,7 @@
       </div>
     </header>
     <div class="wrap-content">
-      <nuxt class="container-content"/>
+      <nuxt class="container-content" />
       <footer class="wrap-simple-des">
         <div class="container-des">
           <el-row>
@@ -42,7 +43,7 @@
         </div>
         <div class="wrap-copyright">
           <div class="container-copyright">
-            &copy;2018 SIDEN | All Rights Reserved | Designed by 
+            &copy;2018 SIDEN | All Rights Reserved | Designed by
             <a href="https://sidenlux.com" class="arch-cp">sidenlux.com</a>
           </div>
         </div>
@@ -54,98 +55,105 @@
 <script>
 export default {
   mounted() {
-    console.log("[layouts default] mounted");
+    // console.log("[layouts default] mounted");
   },
   methods: {
     handleLogout() {
-      this.$auth.logout();
+      // this.$auth.logout();
     }
   }
 };
 </script>
 <style lang="scss" scoped>
 .wrap-layout-default {
-    position: static;
+  position: static;
+  width: 100%;
+  min-width: 900px;
+  z-index: 2;
+  .Header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-width: 900px;
-    z-index: 2;
-    .Header {
-      height: 70px;
-      line-height: 70px;
-      background-color: #f8f8f8;
-      box-shadow: 0px 6px 18px 0px rgba(144,164,183,0.22);
+    min-width: 685px;
+    height: 70px;
+    line-height: 70px;
+    background-color: #f8f8f8;
+    box-shadow: 0px 6px 18px 0px rgba(144, 164, 183, 0.22);
+    z-index: 100;
+  }
+  .content-header {
+    margin: 0 auto;
+    padding: 0 50px;
+    .Header__Title {
+      float: left;
+      user-select: none;
+      height: 40px;
+      margin-top: 15px;
     }
-    .content-header {
-      margin: 0 auto;
-      padding: 0 50px;
-      .Header__Title {
-        float: left;
+    .Header__Menu {
+      float: right;
+      .Header__Link {
+        margin-left: 10px;
+        border: none;
+        padding: 7px 12px;
+        background-color: transparent;
+        color: #333333;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
         user-select: none;
-        height: 40px;
-        margin-top: 15px;
-      }
-      .Header__Menu {
-        float: right;
-        .Header__Link {
-          margin-left: 10px;
-          border: none;
-          padding: 7px 12px;
-          background-color: transparent;
-          color: #333333;
-          font-size: 16px;
-          text-transform: uppercase;
-          text-decoration: none;
-          user-select: none;
-          &:hover {
-            color: #8F1577;
-          }
+        &:hover {
+          color: #8f1577;
         }
       }
     }
-    .content-header:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+  }
+  .content-header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
-    .wrap-content {
-      position: relative;
-      display: block;
-      .container-content {
-        padding: 20px 50px;
-        background-color: white;
-        min-height: calc(100vh - 70px);
-      }
-      .wrap-simple-des {
-        padding: 0 50px;
-        background-color: black;
-        color: white;
-        .container-des {
-          padding: 30px 0;
-          .title-des {
-            margin: .85em auto 8px auto;
-            font-weight: bold;
-          }
+  .wrap-content {
+    position: relative;
+    display: block;
+    padding-top: 70px;
+    .container-content {
+      padding: 20px 50px;
+      background-color: white;
+      min-height: calc(100vh - 70px);
+    }
+    .wrap-simple-des {
+      padding: 0 50px;
+      background-color: black;
+      color: white;
+      .container-des {
+        padding: 30px 0;
+        .title-des {
+          margin: 0.85em auto 8px auto;
+          font-weight: bold;
         }
-        .wrap-copyright {
-          padding-bottom: 15px;
-          .container-copyright {
-            margin: 0 auto;
-            border-top: 1px solid #a4a4a4;
-            padding-top: 17px;
-            font-size: 11px;
-            text-align: center;
-            .arch-cp {
-              text-decoration: none;
-              color: white;
-              &:hover {
-                cursor: pointer;
-                color: #8F1577;
-              }
+      }
+      .wrap-copyright {
+        padding-bottom: 15px;
+        .container-copyright {
+          margin: 0 auto;
+          border-top: 1px solid #a4a4a4;
+          padding-top: 17px;
+          font-size: 11px;
+          text-align: center;
+          .arch-cp {
+            text-decoration: none;
+            color: white;
+            &:hover {
+              cursor: pointer;
+              color: #8f1577;
             }
           }
         }
       }
     }
+  }
 }
 </style>

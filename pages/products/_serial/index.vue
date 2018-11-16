@@ -115,7 +115,7 @@ export default {
     }
   },
   mounted() {
-    console.log("serial index mounted");
+    // console.log("serial index mounted");
   },
   methods: {
     handleBack() {

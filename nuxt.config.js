@@ -64,7 +64,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/toast
     // '@nuxtjs/toast', // IE10 +
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
+    // '@nuxtjs/axios',
     // Doc: https://auth.nuxtjs.org/
     // '@nuxtjs/auth',
     // Doc: https://github.com/nuxt-community/redirect-module
@@ -72,7 +72,6 @@ module.exports = {
   ],
   /*
   ** Axios module configuration
-  */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
     // host: '10.101.90.182',
@@ -81,6 +80,7 @@ module.exports = {
     // , https: true
     , proxy: true
   },
+  */
   proxy: {
     // '/testApi/': 'http://api.example.com',
     // '/testApi2/': {

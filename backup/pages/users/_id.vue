@@ -15,7 +15,7 @@ export default {
     return {};
   },
   mounted() {
-    console.log("[_id.vue] $route:", this.$route);
+    // console.log("[_id.vue] $route:", this.$route);
   }
 };
 </script>
