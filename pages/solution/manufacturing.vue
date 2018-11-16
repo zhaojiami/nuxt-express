@@ -1,7 +1,7 @@
 <template>
     <section class="wrap-solution-detail-page">
         <h2 class="title-pg">Manufacturing</h2>
-        <img class="img-solution" src="../../static/solutions/manufacturing/manufacturing.jpg" alt=""/>
+        <img class="img-solution" src="../../assets/img/solutions/manufacturing/manufacturing.jpg" alt=""/>
         <p>Make factroies Green + increase productivity</p>
         <p>This energy-efficient lighting solutions can help ensure your factories are green.The luminaire with robust construction and high ingress protection also means it can be deployed in the most demanding, heavy-duty working environments.</p>
     </section>

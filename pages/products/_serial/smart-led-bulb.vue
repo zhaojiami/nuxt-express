@@ -3,7 +3,7 @@
         <h2 class="title-pg">Smart LED Bulb 7W</h2>
         <el-row>
           <el-col :span="12">
-            <img class="img-product" src="../../../static/products/smart/smart-led-bulb/7W.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/smart/smart-led-bulb/7W.jpg" alt=""/>
           </el-col>
           <el-col :span="12">
             <ul class="list-666">

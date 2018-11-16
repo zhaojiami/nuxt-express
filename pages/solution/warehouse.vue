@@ -1,7 +1,7 @@
 <template>
     <section class="wrap-solution-detail-page">
         <h2 class="title-pg">Warehouse</h2>
-        <img class="img-solution" src="../../static/solutions/warehouse/warehouse.jpg" alt=""/>
+        <img class="img-solution" src="../../assets/img/solutions/warehouse/warehouse.jpg" alt=""/>
         <p>Controlling each aisle independently + minimize shadows</p>
         <p>In a typical high, open ceiling warehouse application, LED lighting provides superior light with less than half the electricity consumption of traditional light fixtures. Luminaires with narrow teardrop shaped optical distributions will provide reasonable uniformity on the vertical face of the shelves while pushing light all the way down to the floor.</p>
     </section>

@@ -62,13 +62,13 @@ export default {
         color: #8F1577;
       }
       &.indus {
-        background-image: url("../../static/products/indus/ufo-led-highbay/100W-1.jpg");
+        background-image: url("../../assets/img/products/indus/ufo-led-highbay/100W-1.jpg");
       }
       &.com {
-        background-image: url("../../static/products/com/led-par-lamp/7-10W.jpg");
+        background-image: url("../../assets/img/products/com/led-par-lamp/7-10W.jpg");
       }
       &.smart {
-        background-image: url("../../static/products/smart/smart-led-bulb/7W.jpg");
+        background-image: url("../../assets/img/products/smart/smart-led-bulb/7W.jpg");
       }
       .title-serial {
         text-decoration: none;

@@ -3,9 +3,9 @@
         <h2 class="title-pg">Sona Highbay UFO 100W 140 lm/W 2700K-6500 K   IP65</h2>
         <el-row>
           <el-col :span="12">
-            <img class="img-product" src="../../../static/products/indus/ufo-led-highbay/100W-1.jpg" alt=""/>
-            <img class="img-product" src="../../../static/products/indus/ufo-led-highbay/100W-2.jpg" alt=""/>
-            <img class="img-product" src="../../../static/products/indus/ufo-led-highbay/100W-3.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/indus/ufo-led-highbay/100W-1.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/indus/ufo-led-highbay/100W-2.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/indus/ufo-led-highbay/100W-3.jpg" alt=""/>
           </el-col>
           <el-col :span="12">
             <ul class="list-666">

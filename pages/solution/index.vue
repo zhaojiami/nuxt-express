@@ -68,16 +68,16 @@ export default {
         color: #8F1577;
       }
       &.gymnasium {
-        background-image: url("../../static/solutions/gymnasium/gymnasium.jpg");
+        background-image: url("../../assets/img/solutions/gymnasium/gymnasium.jpg");
       }
       &.manufacturing {
-        background-image: url("../../static/solutions/manufacturing/manufacturing.jpg");
+        background-image: url("../../assets/img/solutions/manufacturing/manufacturing.jpg");
       }
       &.smart-home {
-        background-image: url("../../static/solutions/smart-home/smart-home.jpg");
+        background-image: url("../../assets/img/solutions/smart-home/smart-home.jpg");
       }
       &.warehouse {
-        background-image: url("../../static/solutions/warehouse/warehouse.jpg");
+        background-image: url("../../assets/img/solutions/warehouse/warehouse.jpg");
       }
       .title-solution {
         text-decoration: none;

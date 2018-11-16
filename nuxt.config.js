@@ -180,6 +180,16 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    },
+    // extractCSS: true,
+    optimization: {
+      splitChunks: {
+        maxSize: 200000
+      }
+    },
+    publicPath: '/static/',
+    splitChunks: {
+      layouts: true
     }
   },
   serverMiddleware: [
@@ -189,8 +199,8 @@ module.exports = {
   ],
   generate: {
     routes: [
-      '/',
-      '/products',
+      // '/',
+      // '/products',
       '/products/industrial',
       '/products/industrial/ufo-led-highbay',
       '/products/industrial/square-led-highbay',
@@ -202,23 +212,12 @@ module.exports = {
       '/products/commercial/saber-linear-light',
       '/products/smart',
       '/products/smart/led-bulb',
-      '/solution',
+      // '/solution',
       '/solution/gymnasium',
       '/solution/manufacturing',
       '/solution/smart-home',
       '/solution/warehouse',
-      '/about',
-      // '/users',
-      // '/users/111',
-      // '/users/222',
-      // '/users/333',
-
-      // '/en',
-      // '/en/about',
-      // '/en/users',
-      // '/en/users/111',
-      // '/en/users/222',
-      // '/en/users/333'
+      // '/about',
     ]
   }
 }

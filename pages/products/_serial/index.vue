@@ -144,28 +144,28 @@ export default {
         color: #8F1577;
       }
       &.indus-ufo-led-highbay {
-        background-image: url("../../../static/products/indus/ufo-led-highbay/100W-1.jpg");
+        background-image: url("../../../assets/img/products/indus/ufo-led-highbay/100W-1.jpg");
       }
       &.indus-square-led-highbay {
-        background-image: url("../../../static/products/indus/square-led-highbay/100W-1.jpg");
+        background-image: url("../../../assets/img/products/indus/square-led-highbay/100W-1.jpg");
       }
       &.indus-linear-led-highbay {
-        background-image: url("../../../static/products/indus/linear-led-highbay/100W-1.png");
+        background-image: url("../../../assets/img/products/indus/linear-led-highbay/100W-1.png");
       }
       &.indus-nova-flood-light {
-        background-image: url("../../../static/products/indus/nova-flood-light/1.jpg");
+        background-image: url("../../../assets/img/products/indus/nova-flood-light/1.jpg");
       }
       &.com-led-bulb {
-        background-image: url("../../../static/products/com/led-bulb/7W.jpg");
+        background-image: url("../../../assets/img/products/com/led-bulb/7W.jpg");
       }
       &.com-led-par-lamp {
-        background-image: url("../../../static/products/com/led-par-lamp/7-10W.jpg");
+        background-image: url("../../../assets/img/products/com/led-par-lamp/7-10W.jpg");
       }
       &.com-saber-linear-light {
-        background-image: url("../../../static/products/com/saber-linear-light/1.jpg");
+        background-image: url("../../../assets/img/products/com/saber-linear-light/1.jpg");
       }
       &.smart-led-bulb {
-        background-image: url("../../../static/products/smart/smart-led-bulb/7W.jpg");
+        background-image: url("../../../assets/img/products/smart/smart-led-bulb/7W.jpg");
       }
       .title-serial {
         text-decoration: none;

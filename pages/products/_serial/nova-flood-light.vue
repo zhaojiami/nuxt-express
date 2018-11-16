@@ -3,8 +3,8 @@
         <h2 class="title-pg">NOVA SERIES FLOODLIGHT</h2>
         <el-row>
           <el-col :span="24">
-            <img class="img-product" src="../../../static/products/indus/nova-flood-light/1.jpg" alt=""/>
-            <img class="img-product" src="../../../static/products/indus/nova-flood-light/2.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/indus/nova-flood-light/1.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/indus/nova-flood-light/2.jpg" alt=""/>
           </el-col>
           <!-- TODO: <el-col :span="12">
             <ul class="list-666">

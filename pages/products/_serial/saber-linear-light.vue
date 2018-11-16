@@ -3,9 +3,9 @@
         <h2 class="title-pg">SABER SERIES LINEAR LIGHT</h2>
         <el-row>
           <el-col :span="24">
-            <img class="img-product" src="../../../static/products/com/saber-linear-light/1.jpg" alt=""/>
-            <img class="img-product" src="../../../static/products/com/saber-linear-light/2.jpg" alt=""/>
-            <img class="img-product" src="../../../static/products/com/saber-linear-light/3.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/com/saber-linear-light/1.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/com/saber-linear-light/2.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/com/saber-linear-light/3.jpg" alt=""/>
           </el-col>
           <!-- TODO: <el-col :span="12">
             <ul class="list-666">

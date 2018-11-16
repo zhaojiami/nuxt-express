@@ -3,7 +3,7 @@
         <h2 class="title-pg">Par20 LED Lamp 7W</h2>
         <el-row>
           <el-col :span="12">
-            <img class="img-product" src="../../../static/products/com/led-par-lamp/7-10W.jpg" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/com/led-par-lamp/7-10W.jpg" alt=""/>
           </el-col>
           <el-col :span="12">
             <ul class="list-666">

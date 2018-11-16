@@ -3,8 +3,8 @@
         <h2 class="title-pg">Iowa Highbay Linear 100W 150 lm/W 2700K-6500 K   IP65</h2>
         <el-row>
           <el-col :span="12">
-            <img class="img-product" src="../../../static/products/indus/linear-led-highbay/100W-1.png" alt=""/>
-            <img class="img-product" src="../../../static/products/indus/linear-led-highbay/100W-2.png" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/indus/linear-led-highbay/100W-1.png" alt=""/>
+            <img class="img-product" src="../../../assets/img/products/indus/linear-led-highbay/100W-2.png" alt=""/>
           </el-col>
           <el-col :span="12">
             <ul class="list-666">
