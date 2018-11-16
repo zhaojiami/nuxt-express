@@ -13,7 +13,6 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       { rel: 'icon', type: 'image/png', href: '/favicon.png' }
     ]
   },
@@ -150,7 +149,8 @@ module.exports = {
    * 
    */
   router: {
-    base: `/${pkg.name}/`,
+    // base: `/${pkg.name}/`,
+    base: `/`,
     extendRoutes(routes) {
       // routes.push(
       //   {
