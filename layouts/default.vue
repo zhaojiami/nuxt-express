@@ -26,25 +26,20 @@
       <footer class="wrap-simple-des">
         <div class="container-des">
           <el-row>
-            <el-col :span="12">
-              <!-- <div class="title-des">CONTACT INFO</div> -->
+            <el-col :span="24">
               <p class="txt-des">
-                Tel: +86-0755-33174466<br>
-                Email: info@sidenlux.com
-              </p>
-            </el-col>
-            <el-col :span="12">
-              <p class="txt-des">
-                Address: Bao'an District, Shenzhen City, Guangdong Province, China<br>
-                Working Hours: Mon-Fri 8am to 6pm
+                Shenzhen Siden Electronics Co. Ltd</br>
+                Tel: 0755-33174466<br>
+                Mail: info@sidenlux.com<br>
+                Website: <a href="https://www.sidenlux.com" class="arch-cp">www.sidenlux.com</a><br>
+                Address: Building A1 , Hedian Industrial Park, Shijing Road, Guanlan Town, Longhua District, Shenzhen, China
               </p>
             </el-col>
           </el-row>
         </div>
         <div class="wrap-copyright">
           <div class="container-copyright">
-            &copy;2018 SIDEN | All Rights Reserved | Designed by
-            <a href="https://sidenlux.com" class="arch-cp">sidenlux.com</a>
+            &copy;2018 SIDEN | All Rights Reserved | Designed by&nbsp;<a href="https://www.sidenlux.com" class="arch-cp">www.sidenlux.com</a>
           </div>
         </div>
       </footer>

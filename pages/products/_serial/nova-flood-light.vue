@@ -1,6 +1,6 @@
 <template>
     <section class="wrap-product-detail-page">
-        <h2 class="title-pg">NOVA SERIES FLOODLIGHT</h2>
+        <h2 class="title-pg">{{catalogNo}}</h2>
         <el-row>
           <el-col :span="24">
             <img class="img-product" src="../../../assets/img/products/indus/nova-flood-light/1.jpg" alt=""/>
@@ -22,7 +22,7 @@
         <h2 class="title-sec">Specifications</h2>
         <el-table :data="tbSpec" stripe class="tb-sec" :span-method="spanMethod">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="NOVA SERIES FLOODLIGHT">
+          <el-table-column :label="catalogNo">
             <el-table-column label="10W" prop="val"></el-table-column>
             <el-table-column label="20W" prop="val2"></el-table-column>
             <el-table-column label="30W" prop="val3"></el-table-column>
@@ -36,7 +36,7 @@
         <h2 class="title-sec">Size</h2>
         <el-table :data="tbSize" stripe class="tb-sec">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="NOVA SERIES FLOODLIGHT">
+          <el-table-column :label="catalogNo">
             <el-table-column label="10W" prop="val"></el-table-column>
             <el-table-column label="20W" prop="val2"></el-table-column>
             <el-table-column label="30W" prop="val3"></el-table-column>
@@ -50,7 +50,7 @@
         <h2 class="title-sec">Package</h2>
         <el-table :data="tbPkg" stripe class="tb-sec">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="NOVA SERIES FLOODLIGHT">
+          <el-table-column :label="catalogNo">
             <el-table-column label="10W" prop="val"></el-table-column>
             <el-table-column label="20W" prop="val2"></el-table-column>
             <el-table-column label="30W" prop="val3"></el-table-column>
@@ -67,6 +67,7 @@
 export default {
     data() {
         return {
+            catalogNo: 'NOVA SERIES FLOODLIGHT',
             tbSpec: [
                 {
                     catalog: 'System power', 
@@ -139,8 +140,8 @@ export default {
             tbPkg: [
                 {
                     catalog: 'Carton Size', 
-                    val: '480*380*435mm (2PCS /CTN)',
-                    val2: '5150*380*260mm (36PCS /CTN)',
+                    val: '480*380*435mm (36PCS /CTN)',
+                    val2: '5150*380*260mm (20PCS /CTN)',
                     val3: '535*405*260mm (20PCS /CTN)',
                     val4: '530*365*255mm  (8PCS /CTN)',
                     val5: '435*340*130mm  (1PCS /CTN)',
@@ -148,8 +149,28 @@ export default {
                     val7: '510*430*135mm  (1PCS /CTN)',
                     val8: '555*460*135mm  (1PCS /CTN)'
                 },
-                {catalog: 'N.W.:', val: ''},
-                {catalog: 'G.W.:', val: ''},
+                {
+                    catalog: 'N.W.:', 
+                    val: '0.38KG',
+                    val2: '0.75KG',
+                    val3: '0.9KG',
+                    val4: '2KG',
+                    val5: '3.6KG',
+                    val6: '4.1KG',
+                    val7: '5.2KG',
+                    val8: '6.2KG'
+                },
+                {
+                    catalog: 'G.W.:', 
+                    val: '15KG 36PCS/CTN',
+                    val2: '16KG 20PCS/CTN',
+                    val3: '20KG 20PCS/CTN',
+                    val4: '18KG 8PCS/CTN',
+                    val5: '4.3KG 1PCS/CTN',
+                    val6: '5KG 1PCS/CTN',
+                    val7: '6.2KG 1PCS/CTN',
+                    val8: '7.5KG 1PCS/CTN'
+                }
             ]
         }
     },

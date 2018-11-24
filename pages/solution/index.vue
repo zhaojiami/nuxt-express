@@ -59,7 +59,7 @@ export default {
       padding: 210px 10px 0 10px;
       background-repeat: no-repeat;
       background-position: center top;
-      background-size: auto 200px;
+      background-size: 300px 200px;
       color: #333333;
       text-align: center;
       cursor: pointer;

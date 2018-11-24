@@ -1,6 +1,6 @@
 <template>
     <section class="wrap-product-detail-page">
-        <h2 class="title-pg">Iowa Highbay Linear 100W 150 lm/W 2700K-6500 K   IP65</h2>
+        <h2 class="title-pg">{{catalogNo}}</h2>
         <el-row>
           <el-col :span="12">
             <img class="img-product" src="../../../assets/img/products/indus/linear-led-highbay/100W-1.png" alt=""/>
@@ -20,19 +20,34 @@
           </el-col>
         </el-row>
         <h2 class="title-sec">Specifications</h2>
-        <el-table :data="tbSpec" stripe class="tb-sec">
+        <el-table :data="tbSpec" stripe class="tb-sec" :span-method="spanMethod">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column :label="catalogNo">
+            <el-table-column label="100W" prop="val"></el-table-column>
+            <el-table-column label="150W" prop="val2"></el-table-column>
+            <el-table-column label="200W" prop="val3"></el-table-column>
+            <el-table-column label="240W" prop="val4"></el-table-column>
+          </el-table-column>
         </el-table>
         <h2 class="title-sec">Size</h2>
-        <el-table :data="tbSize" stripe class="tb-sec">
+        <el-table :data="tbSize" stripe class="tb-sec" :span-method="spanMethod2">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column :label="catalogNo">
+            <el-table-column label="100W" prop="val"></el-table-column>
+            <el-table-column label="150W" prop="val2"></el-table-column>
+            <el-table-column label="200W" prop="val3"></el-table-column>
+            <el-table-column label="240W" prop="val4"></el-table-column>
+          </el-table-column>
         </el-table>
         <h2 class="title-sec">Package</h2>
         <el-table :data="tbPkg" stripe class="tb-sec">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column :label="catalogNo">
+            <el-table-column label="100W" prop="val"></el-table-column>
+            <el-table-column label="150W" prop="val2"></el-table-column>
+            <el-table-column label="200W" prop="val3"></el-table-column>
+            <el-table-column label="240W" prop="val4"></el-table-column>
+          </el-table-column>
         </el-table>
     </section>
 </template>
@@ -40,9 +55,22 @@
 export default {
     data() {
         return {
+            catalogNo: 'SONA SERIES LINEAR HIGHBAY',
             tbSpec: [
-                {catalog: 'System power', val: '100W / 150W / 200W / 240W'},
-                {catalog: 'Lumens', val: '15 000 LM'},
+                {
+                    catalog: 'System power', 
+                    val: '100W',
+                    val2: '150W',
+                    val3: '200W',
+                    val4: '240W'
+                },
+                {
+                    catalog: 'Lumens', 
+                    val: '14000 LM',
+                    val2: '21000 LM',
+                    val3: '28000 LM',
+                    val4: '33600 LM'
+                },
                 {catalog: 'Mains voltage', val: '100-277Vac/ 50-60Hz'},
                 {catalog: 'Lamp colour temperature', val: '2700-6000K'},
                 {catalog: 'Lamp life (L70)', val: '50,000HRS'},
@@ -55,13 +83,61 @@ export default {
                 {catalog: 'Storage humidity', val: '+ 10% to +95% RH, non-condensing'},
             ],
             tbSize: [
-                {catalog: 'Size', val: 'L600 * W172*H93 mm'},
+                {
+                    catalog: 'Length', 
+                    val: '600 mm',
+                    val2: '900 mm',
+                    val3: '1200 mm',
+                    val4: '1500 mm'
+                },
+                {
+                    catalog: 'Width', 
+                    val: '172 mm'
+                },
+                {
+                    catalog: 'Height', 
+                    val: '93 mm'
+                }
             ],
             tbPkg: [
-                {catalog: 'Carton Size', val: '645*220*215mm (2PCS /CTN)'},
-                {catalog: 'N.W.:', val: '3.5KG'},
-                {catalog: 'G.W.:', val: '7.8KG (2PCS /CTN)'},
+                {
+                    catalog: 'Carton Size', 
+                    val: '645*220*215mm (2PCS /CTN)',
+                    val2: '945*220*215mm (2PCS /CTN)',
+                    val3: '1245*220*215mm (2PCS /CTN)',
+                    val4: '1545*220*215mm (2PCS /CTN)'
+                },
+                {
+                    catalog: 'N.W.:', 
+                    val: '3.5KG/PC',
+                    val2: '4.7KG/PC',
+                    val3: '6KG/PC',
+                    val4: '7.1KG/PC',
+                },
+                {
+                    catalog: 'G.W.:', 
+                    val: '7.8KG (2PCS /CTN)',
+                    val2: '10.4KG (2PCS /CTN)',
+                    val3: '13.2KG (2PCS /CTN)',
+                    val4: '15.6KG (2PCS /CTN)'
+                }
             ]
+        }
+    },
+    methods: {
+        spanMethod({ row, column, rowIndex, columnIndex }) {
+            if (rowIndex >= 2 && columnIndex >= 1) {
+                return [1,4]
+            } else {
+                return [1,1]
+            }
+        },
+        spanMethod2({ row, column, rowIndex, columnIndex }) {
+            if (rowIndex >= 1 && columnIndex >= 1) {
+                return [1,4]
+            } else {
+                return [1,1]
+            }
         }
     }
 }

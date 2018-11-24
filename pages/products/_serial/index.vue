@@ -38,31 +38,31 @@ export default {
       products: [
         {
           id: "ufo-led-highbay",
-          name: " ufo led highbay",
+          name: "UFO LED Highbay",
           serial: "industrial",
           cls: "indus-ufo-led-highbay"
         },
         {
           id: "square-led-highbay",
-          name: "square led highbay",
+          name: "Square LED Highbay",
           serial: "industrial",
           cls: "indus-square-led-highbay"
         },
         {
           id: "linear-led-highbay",
-          name: "linear led highbay",
+          name: "Linear LED Highbay",
           serial: "industrial",
           cls: "indus-linear-led-highbay"
         },
         {
           id: "nova-flood-light",
-          name: "nova flood light",
+          name: "LED Floodlight",
           serial: "industrial",
           cls: "indus-nova-flood-light"
         },
         {
           id: "led-bulb",
-          name: "LED bulb",
+          name: "LED Bulb",
           serial: "commercial",
           cls: "com-led-bulb"
         },
@@ -74,21 +74,21 @@ export default {
         // },
         {
           id: "led-par-lamp",
-          name: "led par lamp",
+          name: "LED PAR Lamp",
           serial: "commercial",
           serialName: "Commercial Lighting",
           cls: "com-led-par-lamp"
         },
         {
           id: "saber-linear-light",
-          name: "saber linear light",
+          name: "LED Linear Light",
           serial: "commercial",
           serialName: "Commercial Lighting",
           cls: "com-saber-linear-light"
         },
         {
           id: "led-bulb",
-          name: "smart led bulb",
+          name: "Smart LED Bulb",
           serial: "smart",
           serialName: "Smart Lighting",
           cls: "smart-led-bulb"

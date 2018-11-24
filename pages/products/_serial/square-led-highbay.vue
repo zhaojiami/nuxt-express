@@ -1,6 +1,6 @@
 <template>
     <section class="wrap-product-detail-page">
-        <h2 class="title-pg">Cube Highbay Square UFO 100W 140 lm/W 2700K-6500 K   IP65</h2>
+        <h2 class="title-pg">{{catalogNo}}</h2>
         <el-row>
           <el-col :span="12">
             <img class="img-product" src="../../../assets/img/products/indus/square-led-highbay/100W-1.jpg" alt=""/>
@@ -23,19 +23,22 @@
           </el-col>
         </el-row>
         <h2 class="title-sec">Specifications</h2>
-        <el-table :data="tbSpec" stripe class="tb-sec">
+        <el-table :data="tbSpec" stripe class="tb-sec" :span-method="spanMethod">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column :label="catalogNo">
+            <el-table-column label="100W" prop="val"></el-table-column>
+            <el-table-column label="150W" prop="val2"></el-table-column>
+          </el-table-column>
         </el-table>
         <h2 class="title-sec">Size</h2>
         <el-table :data="tbSize" stripe class="tb-sec">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column label="100W/150W" prop="val"></el-table-column>
         </el-table>
         <h2 class="title-sec">Package</h2>
         <el-table :data="tbPkg" stripe class="tb-sec">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column label="100W/150W" prop="val"></el-table-column>
         </el-table>
     </section>
 </template>
@@ -43,9 +46,18 @@
 export default {
     data() {
         return {
+            catalogNo: 'CUBE SERIES HIGHBAY',
             tbSpec: [
-                {catalog: 'System power', val: '100W / 150W'},
-                {catalog: 'Lumens', val: '14 000 LM'},
+                {
+                    catalog: 'System power', 
+                    val: '100W',
+                    val2: '150W'
+                },
+                {
+                    catalog: 'Lumens', 
+                    val: '14000 LM',
+                    val2: '21000 LM'
+                },
                 {catalog: 'Mains voltage', val: '100-277Vac/ 50-60Hz'},
                 {catalog: 'Lamp colour temperature', val: '2700-6000K'},
                 {catalog: 'Lamp life (L70)', val: '50,000HRS'},
@@ -66,6 +78,15 @@ export default {
                 {catalog: 'N.W.:', val: '3.4KG'},
                 {catalog: 'G.W.:', val: '9.6KG (2PCS /CTN)'},
             ]
+        }
+    },
+    methods: {
+        spanMethod({ row, column, rowIndex, columnIndex }) {
+            if (rowIndex >= 2 && columnIndex >= 1) {
+                return [1,2]
+            } else {
+                return [1,1]
+            }
         }
     }
 }

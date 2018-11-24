@@ -1,6 +1,6 @@
 <template>
     <section class="wrap-product-detail-page">
-        <h2 class="title-pg">Sona Highbay UFO 100W 140 lm/W 2700K-6500 K   IP65</h2>
+        <h2 class="title-pg">{{catalogNo}}</h2>
         <el-row>
           <el-col :span="12">
             <img class="img-product" src="../../../assets/img/products/indus/ufo-led-highbay/100W-1.jpg" alt=""/>
@@ -22,19 +22,30 @@
           </el-col>
         </el-row>
         <h2 class="title-sec">Specifications</h2>
-        <el-table :data="tbSpec" stripe class="tb-sec">
+        <el-table :data="tbSpec" stripe class="tb-sec" :span-method="spanMethod">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column :label="catalogNo">
+            <el-table-column label="100W" prop="val"></el-table-column>
+            <el-table-column label="150W" prop="val2"></el-table-column>
+            <el-table-column label="200W" prop="val3"></el-table-column>
+            <el-table-column label="240W" prop="val4"></el-table-column>
+          </el-table-column>
         </el-table>
         <h2 class="title-sec">Size</h2>
         <el-table :data="tbSize" stripe class="tb-sec">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column :label="catalogNo">
+            <el-table-column label="100W/150W" prop="val"></el-table-column>
+            <el-table-column label="200W/240W" prop="val2"></el-table-column>
+          </el-table-column>
         </el-table>
         <h2 class="title-sec">Package</h2>
         <el-table :data="tbPkg" stripe class="tb-sec">
           <el-table-column label="Catalogue No" prop="catalog" width="200px"></el-table-column>
-          <el-table-column label="SNHBM3" prop="val"></el-table-column>
+          <el-table-column :label="catalogNo">
+            <el-table-column label="100W/150W" prop="val"></el-table-column>
+            <el-table-column label="200W/240W" prop="val2"></el-table-column>
+          </el-table-column>
         </el-table>
     </section>
 </template>
@@ -42,9 +53,22 @@
 export default {
     data() {
         return {
+            catalogNo: 'AURA SERIES HIGHBAY',
             tbSpec: [
-                {catalog: 'System power', val: '100W / 150W / 200W / 240W'},
-                {catalog: 'Lumens', val: '14 000 LM'},
+                {
+                    catalog: 'System power', 
+                    val: '100W',
+                    val2: '150W',
+                    val3: '200W',
+                    val4: '240W'
+                },
+                {
+                    catalog: 'Lumens',
+                    val: '14000 LM',
+                    val2: '21000 LM',
+                    val3: '28000 LM',
+                    val4: '33600 LM'
+                },
                 {catalog: 'Mains voltage', val: '100-277Vac/ 50-60Hz'},
                 {catalog: 'Lamp colour temperature', val: '2700-6000K'},
                 {catalog: 'Lamp life (L70)', val: '50,000HRS'},
@@ -57,14 +81,43 @@ export default {
                 {catalog: 'Storage humidity', val: '+ 10% to +95% RH, non-condensing'},
             ],
             tbSize: [
-                {catalog: 'Diameter', val: '360 mm'},
-                {catalog: 'Height', val: '170 mm'},
+                {
+                    catalog: 'Diameter', 
+                    val: '360 mm',
+                    val2: '460 mm'
+                },
+                {
+                    catalog: 'Height', 
+                    val: '170 mm',
+                    val2: '185 mm'
+                },
             ],
             tbPkg: [
-                {catalog: 'Carton Size', val: '480*380*435mm (2PCS /CTN)'},
-                {catalog: 'N.W.:', val: '3.4KG'},
-                {catalog: 'G.W.:', val: '9.6KG (2PCS /CTN)'},
+                {
+                    catalog: 'Carton Size', 
+                    val: '480*380*435mm (2PCS /CTN)',
+                    val2: '510*430*510mm (2PCS /CTN)'
+                },
+                {
+                    catalog: 'N.W.:', 
+                    val: '3.4KG/PC',
+                    val2: '5.6KG/PC'
+                },
+                {
+                    catalog: 'G.W.:', 
+                    val: '9.6KG (2PCS /CTN)',
+                    val2: '12.8KG (2PCS /CTN)'
+                }
             ]
+        }
+    },
+    methods: {
+        spanMethod({ row, column, rowIndex, columnIndex }) {
+            if (rowIndex >= 2 && columnIndex >= 1) {
+                return [1,4]
+            } else {
+                return [1,1]
+            }
         }
     }
 }
